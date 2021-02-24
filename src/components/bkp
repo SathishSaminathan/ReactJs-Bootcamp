@@ -1,0 +1,50 @@
+import React, { Component } from "react";
+
+function Header() {
+  return <h1>Header Component</h1>;
+}
+
+export default Header;
+
+import React from "react";
+
+const Footer = () => {
+  return <h2>Footer Component &copy; Manoj</h2>;
+};
+
+export default Footer;
+
+import React from "react";
+
+const Sidenav = () => {
+  return (
+    <div className="links">
+      <a href="https://www.facebook.com" target="_blank">
+        Facebook
+      </a>
+      <br />
+      <a href="https://www.mercedesbenz.com" target="_blank">
+        Benz
+      </a>
+    </div>
+  );
+};
+
+export default Sidenav;
+
+import Header from "./components/Header";
+import Sidenav from "./components/Sidenav";
+import Footer from "./components/Footer";
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Sidenav />
+        <hr />
+        <Footer />
+      </div>
+    );
+  }
+}
